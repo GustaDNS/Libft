@@ -12,28 +12,28 @@
 
 #include "libft.h"
 
-void	*ft_memset(void *ptr, int x, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*p;
 	unsigned char	value;
 	size_t			i;
 
 	i = 0;
-	p = (unsigned char *)ptr;
-	value = (unsigned char)x;
+	p = (unsigned char *)s;
+	value = (unsigned char)c;
 	while (i < n)
 	{
 		p[i] = value;
 		i++;
 	}
-	return (ptr);
+	return (s);
 }
 
-/* int	main()
+int	main()
 {
 	char str[50] = "Gustavo This is string.h library function";
 	puts(str);
 	ft_memset(str, '$', 7);
 	puts(str);
 	return(0);
-} */
+}
