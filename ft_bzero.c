@@ -16,9 +16,9 @@ void	*ft_bzero(void *s, size_t n)
 }
 /* int	main()
 {
-	char str[50] = "Gustavo This is string.h library function";
+	char str[50] = "Gustavo This is bzero";
 	puts(str);
-	ft_bzero(str, 7);
+	ft_bzero(str, 3);
 	puts(str);
 	return(0);
 } */

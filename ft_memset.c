@@ -28,12 +28,12 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
+/* 
 int	main()
 {
-	char str[50] = "Gustavo This is string.h library function";
+	char str[50] = "Gustavo This is memset";
 	puts(str);
-	ft_memset(str, '$', 7);
+	ft_memset(str, '-', 7);
 	puts(str);
 	return(0);
-}
+} */
