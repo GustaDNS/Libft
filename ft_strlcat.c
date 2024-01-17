@@ -39,5 +39,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	//strcat(src, dest);
 	printf("Str: %ld \n", strlcat(dest1, src1, nb));
 	printf("Str: %u", ft_strlcat(dest, src, nb2));
-	return (0);
+	return (0)
 } */
