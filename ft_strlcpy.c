@@ -20,3 +20,15 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		s++;
 	return (s - src);
 }
+/* int	main()
+{
+	char src[10]	= "ab";
+	char dest[10]	= "123";
+
+	size_t 			nb = 2;
+	unsigned int 	nb2 = 2;
+	//strcat(src, dest);
+	printf("Str: %ld \n", strlcpy(dest, src, nb));
+	printf("Str: %lu", ft_strlcpy(dest, src, nb2));
+	return (0);
+} */

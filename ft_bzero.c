@@ -1,24 +1,24 @@
 #include "libft.h"
 
-void	*ft_bzero(void *s, size_t n)
+void	*ft_bzero(void *ptr, size_t x)
 {
+	unsigned char	*str;
 	size_t			i;
-	unsigned char	*p;
 
+	str = (unsigned char *)ptr;
 	i = 0;
-	p = (unsigned char *)s;
-	while (i < n)
+	while (i < x)
 	{
-		p[i] = '\0';
+		str[i] = '\0';
 		i++;
 	}
-	return (s);
+	return (ptr);
 }
-/* int	main()
-{
-	char str[50] = "Gustavo This is bzero";
+
+/* int	main() {
+	char str[50] = "Gustavo This is memset";
 	puts(str);
-	ft_bzero(str, 3);
+	ft_bzero(str, 7);
 	puts(str);
 	return(0);
 } */

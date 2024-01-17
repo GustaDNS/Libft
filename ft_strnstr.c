@@ -28,3 +28,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
+/* int	main()
+{
+	printf("%s", ft_strnstr("Gustavo", "tavo", 6));
+	return(0);
+} */

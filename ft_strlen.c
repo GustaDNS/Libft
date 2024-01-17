@@ -1,6 +1,6 @@
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
@@ -11,3 +11,8 @@ size_t	ft_strlen(char *str)
 	}
 	return(i);
 }
+/* int	main()
+{
+	printf("%zu", ft_strlen("Gustavo"));
+	return(0);
+} */
