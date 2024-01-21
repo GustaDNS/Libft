@@ -7,4 +7,4 @@
 </div>
 
 # libft
-My first project inc 42 Porto!!
+My first project in 42 Porto!!
