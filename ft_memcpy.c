@@ -14,14 +14,17 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	src2 = src;
 	while (n--)
 		*dest2++ = *src2++;
+	dest = dest2;
 	return (dest);
 	
 }
 /* int	main()
 {
-	char str[50] = "Gustavo This is memset";
-	puts(str);
-	ft_bzero(str, 7);
-	puts(str);
-	return(0);
-} */
+	char src[50] = "Gustavo Daniel";
+	char dest[50];
+	
+	memcpy(dest, src, strlen(src) + 1);
+	printf("After memcpy dest = %s\n", dest);
+	return (0);
+}
+ */
