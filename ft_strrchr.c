@@ -1,16 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/29 14:39:41 by marvin            #+#    #+#             */
+/*   Updated: 2024/01/29 14:39:41 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])
-		i++; // chegar ao fim da minha string
+		i++;
 	while (s[i] != c && i >= 0)
-		i--; //no fim, reduzir até encontrar o caractere igual
+		i--;
 	if (s[i] == c)
-		return ((char *)&s[i]); //retornar o endereço do caractere
+		return ((char *)&s[i]);
 	return (NULL);
 }
 /* int	main()

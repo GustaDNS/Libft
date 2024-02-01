@@ -1,19 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/29 14:38:24 by marvin            #+#    #+#             */
+/*   Updated: 2024/01/29 14:38:24 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static size_t    count_len(const char *str)
+static size_t	count_len(const char *str)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while(str[i] != '\0')
-    {
-        i++;
-    }
-    return(i);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
 char	*ft_strjoin(char const *s1, char const *s2)
-{	
+{
 	char	*res;
 	int		i;
 	int		k;

@@ -1,17 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/29 14:23:49 by marvin            #+#    #+#             */
+/*   Updated: 2024/01/29 14:23:49 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*
-The memchr() function scans the initial n bytes of the memory area pointed to by s 
-for the first instance of c. Both c and the bytes of the memory area pointed to by s are 
+The memchr() function scans the initial n bytes of 
+the memory area pointed to by s 
+for the first instance of c. Both c and the bytes 
+of the memory area pointed to by s are 
 interpreted as unsigned char.
 
 The memchr() and memrchr() functions return a pointer to the matching byte or 
 NULL if the character does not occur in the given memory area.
 */
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned int	i;
-	const unsigned char *str;
-	
+	unsigned int		i;
+	const unsigned char	*str;
+
 	str = (const unsigned char *)s;
 	i = 0;
 	while (i < n)
@@ -22,6 +36,7 @@ void *ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
 /* int	main()
 {
 	char str[] = "Hello World";
@@ -31,5 +46,4 @@ void *ft_memchr(const void *s, int c, size_t n)
 	ptr = ft_memchr(str, 'W', 7);
 	printf("%s\n", ptr);
 	return (0);
-}
- */
+}*/
