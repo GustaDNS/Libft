@@ -12,21 +12,10 @@
 
 #include "libft.h"
 
-void	*ft_bzero(void *ptr, size_t x)
+void	ft_bzero(void *ptr, size_t x)
 {
-	unsigned char	*str;
-	size_t			i;
-
-	str = (unsigned char *)ptr;
-	i = 0;
-	while (i < x)
-	{
-		str[i] = '\0';
-		i++;
-	}
-	return (ptr);
+	ft_memset(ptr, 0, x);
 }
-
 /* int	main() {
 	char str[50] = "Gustavo This is memset";
 	puts(str);
