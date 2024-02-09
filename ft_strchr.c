@@ -21,16 +21,21 @@
     if c is specified as '\0', these functions return a pointer to
     the terminator.
 */
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *str, int r)
 {
-	int	i;
+	int		i;
+	char	*p;
 
+	p = (char *)str;
 	i = 0;
-	while (s[i] != c && s[i])
+	while ((unsigned char)str[i] != (unsigned char)r)
+	{
+		if (!str[i])
+			return (0);
 		i++;
-	if (s[i] == c)
-		return ((char *)&s[i]);
-	return (NULL);
+		p++;
+	}
+	return (p);
 }
 /* int	main()
 {
