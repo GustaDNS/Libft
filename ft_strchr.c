@@ -3,24 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: gudaniel <gudaniel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/29 14:37:46 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/29 14:37:46 by marvin           ###   ########.fr       */
+/*   Created: 2024/04/09 13:58:42 by gudaniel          #+#    #+#             */
+/*   Updated: 2024/04/09 13:58:45 by gudaniel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-	The strchr() function returns a pointer to the first occurrence
-    of the character c in the string s.
 
-	The strchr() and strrchr() functions return a pointer to the
-    matched character or NULL if the character is not found.  The
-    terminating null byte is considered part of the string, so that
-    if c is specified as '\0', these functions return a pointer to
-    the terminator.
-*/
 char	*ft_strchr(const char *str, int r)
 {
 	int		i;

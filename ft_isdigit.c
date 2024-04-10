@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: gudaniel <gudaniel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/13 14:01:41 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/13 14:01:41 by marvin           ###   ########.fr       */
+/*   Created: 2024/04/09 13:55:55 by gudaniel          #+#    #+#             */
+/*   Updated: 2024/04/09 13:56:11 by gudaniel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "unistd.h"
 
 int	ft_isdigit(int c)
 {
