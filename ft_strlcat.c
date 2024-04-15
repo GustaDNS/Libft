@@ -6,7 +6,7 @@
 /*   By: gudaniel <gudaniel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 13:59:24 by gudaniel          #+#    #+#             */
-/*   Updated: 2024/04/09 13:59:28 by gudaniel         ###   ########.fr       */
+/*   Updated: 2024/04/15 15:27:46 by gudaniel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,29 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	res;
+	int		i;
+	int		j;
+	size_t	res;
 
-	i = 0;
 	j = 0;
-	res = 0;
-	while (dst[i] != '\0')
+	i = 0;
+	res = (size_t)ft_strlen(dst) + (size_t)ft_strlen(src);
+	if (size < (size_t)ft_strlen(dst))
+		return ((size_t) ft_strlen(src) + size);
+	while (dst[i])
 		i++;
-	while (src[res] != '\0')
-		res++;
-	if (size <= i)
-		res += size;
-	else
-		res += i;
-	while (src[j] != '\0' && (i + 1) < size)
+	while (src[j] != '\0' && ((size_t)i < size - 1))
 	{
-		dst[i] = src[j];
-		i++;
-		j++;
+		dst[i++] = src[j++];
 	}
 	dst[i] = '\0';
 	return (res);
 }
-/* int main(void)
+/* int	main()
 {
-	const char src1[10]	= "ab";
-	char dest1[10]   = "123";
-
-	char src[10]	= "ab";
-	char dest[10]	= "123";
-
-	size_t 			nb = 2;
-	unsigned int 	nb2 = 2;
-	//strcat(src, dest);
-	printf("Str: %ld \n", strlcat(dest1, src1, nb));
-	printf("Str: %u", ft_strlcat(dest, src, nb2));
-	return (0)
+	char dest[100] = "Gustavo";
+	char src[100] = " Daniel";
+	printf("%lu\n", ft_strlcat(dest, src, 10));
+	printf("%s\n", dest);
+	return (0);
 } */
