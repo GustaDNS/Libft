@@ -8,7 +8,11 @@ SOURCE = 	ft_atoi.c     ft_itoa.c        ft_putnbr_fd.c  ft_strlcpy.c  ft_touppe
 			ft_isdigit.c  ft_putchar_fd.c  ft_strjoin.c    ft_substr.c \
 			ft_isprint.c  ft_putendl_fd.c  ft_strlcat.c    ft_tolower.c \
 
+SOURCE_BONUS = ft_lstnew.c	ft_lstadd_front.c	ft_lstsize.c	ft_lstlast.c	ft_lstadd_back.c \
+			   ft_lstdelone.c	ft_lstclear.c	ft_lstiter.c	ft_lstmap.c
+
 OBJ = $(SOURCE:.c=.o)
+BONUS_OBJ = $(BONUS: .c=.o)
 FLAG = -Wall -Wextra -Werror
 COMPILER = cc
 
@@ -20,9 +24,12 @@ $(NAME):
 		ranlib $(NAME)
 
 clean:	
-	rm -f $(OBJ)
+	rm -f $(OBJ) $()
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+bonus: $(SOURCE) $(BONUS_OBJ)
+		ar rcs	$(NAME) $(OBJ) $(BONUS_OBJ)
