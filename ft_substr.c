@@ -6,7 +6,7 @@
 /*   By: gudaniel <gudaniel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 14:00:15 by gudaniel          #+#    #+#             */
-/*   Updated: 2024/04/09 14:00:19 by gudaniel         ###   ########.fr       */
+/*   Updated: 2024/04/22 18:55:32 by gudaniel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	len_sub;
 
 	i = 0;
-	len_sub = ft_strlen(s);
 	if (!s)
 		return (0);
+	len_sub = ft_strlen(s);
 	if (len > len_sub - start)
 		len = len_sub - start;
 	if (start > len_sub)

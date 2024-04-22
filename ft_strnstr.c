@@ -6,37 +6,36 @@
 /*   By: gudaniel <gudaniel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 13:59:52 by gudaniel          #+#    #+#             */
-/*   Updated: 2024/04/09 13:59:55 by gudaniel         ###   ########.fr       */
+/*   Updated: 2024/04/22 18:34:26 by gudaniel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(char *origin, char *find, size_t n)
 {
-	const char	*b;
-	const char	*l;
-	size_t		temp;
+	size_t	i;
+	size_t	j;
 
-	if (!*little)
-		return ((char *)big);
-	while (*big && len != 0)
+	i = 0;
+	if (!n && !origin)
+		return (NULL);
+	if (!origin[i] && !find[i])
+		return (origin);
+	if (!find[i])
+		return (origin);
+	while ((origin[i]))
 	{
-		b = big;
-		l = little;
-		temp = len;
-		while (*b && *l && *b == *l)
+		j = 0;
+		while (origin[i + j] == find[j] && (i + j) < n)
 		{
-			if (temp == 0)
-				break ;
-			b++;
-			l++;
-			temp--;
+			if (find[j] == '\0' && origin[i + j] == '\0')
+				return (origin + i);
+			j++;
 		}
-		if (!*l)
-			return ((char *)big);
-		big++;
-		len--;
+		if (find[j] == '\0')
+			return (origin + i);
+		i++;
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: gudaniel <gudaniel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 13:59:24 by gudaniel          #+#    #+#             */
-/*   Updated: 2024/04/15 15:27:46 by gudaniel         ###   ########.fr       */
+/*   Updated: 2024/04/22 19:56:42 by gudaniel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	j = 0;
 	i = 0;
+	if (!size && (!dst || !src))
+		return (0);
 	res = (size_t)ft_strlen(dst) + (size_t)ft_strlen(src);
 	if (size < (size_t)ft_strlen(dst))
 		return ((size_t) ft_strlen(src) + size);

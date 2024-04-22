@@ -6,7 +6,7 @@
 /*   By: gudaniel <gudaniel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 14:41:54 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/15 15:57:03 by gudaniel         ###   ########.fr       */
+/*   Updated: 2024/04/22 19:57:15 by gudaniel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ char	**ft_split(const char *str, char c)
 	int		a;
 	char	**split;
 
+	if (!str)
+		return (NULL);
 	words = ft_word_count(str, c);
 	split = (char **)malloc((words + 1) * sizeof(char *));
 	if (!split)
@@ -85,6 +87,7 @@ char	**ft_split(const char *str, char c)
 	split[j] = NULL;
 	return (split);
 }
+
 // int main(int ac, char **av)
 // {
 //  (void)ac;
