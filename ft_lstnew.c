@@ -6,7 +6,7 @@
 /*   By: gudaniel <gudaniel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:40:44 by gudaniel          #+#    #+#             */
-/*   Updated: 2024/04/22 19:48:49 by gudaniel         ###   ########.fr       */
+/*   Updated: 2024/04/22 20:38:48 by gudaniel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,15 @@ t_list	*ft_lstnew(void *content)
 	node->content = content;
 	node->next = NULL;
 	return (node);
+}
+
+int main()
+{
+	t_list *node = ft_lstnew("Hello, world!");
+	if (node)
+	{
+		printf("Content: %s\n", (char *)node->content);
+		printf("Next: %p\n", node->next);
+	}
+	return 0;
 }

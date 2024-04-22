@@ -8,7 +8,10 @@ SOURCE = 	ft_atoi.c     ft_itoa.c        ft_putnbr_fd.c  ft_strlcpy.c  ft_touppe
 			ft_isdigit.c  ft_putchar_fd.c  ft_strjoin.c    ft_substr.c \
 			ft_isprint.c  ft_putendl_fd.c  ft_strlcat.c    ft_tolower.c \
 
+SOURCE_BONUS = ft_lstnew.c
+
 OBJ = $(SOURCE:.c=.o)
+BONUS_OBJ = $(SOUR.:.c=.o)
 FLAG = -Wall -Wextra -Werror
 COMPILER = cc
 
@@ -20,13 +23,16 @@ $(NAME):
 		ranlib $(NAME)
 
 clean:	
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(BONUS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
+bonus: $(SOURCE_BONUS) $(BONUS_OBJ)
+		ar rcs $(NAME) $(SOURCE_BONUS) $(BONUS_OBJ)
+
 so:
-	cc -nostartfiles -fPIC $(FLAG) $(SOURCE) 
-	gcc -nostartfiles -shared -o libft.so $(OBJ) 
+	cc -nostartfiles -fPIC $(FLAG) $(SOURCE) $(SOURCE_BONUS)
+	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BONUS_OBJ)
