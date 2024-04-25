@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: gudaniel <gudaniel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/04/25 17:27:27 by gudaniel          #+#    #+#              #
+#    Updated: 2024/04/25 17:27:30 by gudaniel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 SOURCE = 	ft_atoi.c     ft_itoa.c        ft_putnbr_fd.c  ft_strlcpy.c  ft_toupper.c \
 			ft_bzero.c    ft_memchr.c      ft_putstr_fd.c  ft_strlen.c 	 ft_strmapi.c\
