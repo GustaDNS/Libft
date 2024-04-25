@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gudaniel <gudaniel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 16:40:44 by gudaniel          #+#    #+#             */
-/*   Updated: 2024/04/25 13:44:00 by gudaniel         ###   ########.fr       */
+/*   Created: 2024/04/25 15:12:47 by gudaniel          #+#    #+#             */
+/*   Updated: 2024/04/25 15:59:14 by gudaniel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*node;
+	t_list	*list;
+	t_list	*obj;
 
-	node = (t_list *)malloc(sizeof(t_list));
-	if (!node)
+	list = NULL;
+	if (!lst || !del || !f)
 		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
-}
-
-/* int main()
-{
-	t_list *node = ft_lstnew("Hello, world!");
-	if (node)
+	while (lst)
 	{
-		printf("Content: %s\n", (char *)node->content);
-		printf("Next: %p\n", node->next);
+		obj = ft_lstnew(f(lst->content));
+		if (!obj)
+		{
+			ft_lstclear(&list, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&list, obj);
+		lst = lst->next;
 	}
-	return 0;
-} */
+	return (list);
+}

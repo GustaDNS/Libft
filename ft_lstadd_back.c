@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gudaniel <gudaniel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 16:40:44 by gudaniel          #+#    #+#             */
-/*   Updated: 2024/04/25 13:44:00 by gudaniel         ###   ########.fr       */
+/*   Created: 2024/04/25 14:14:43 by gudaniel          #+#    #+#             */
+/*   Updated: 2024/04/25 15:02:38 by gudaniel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*node;
+	t_list	*last;
 
-	node = (t_list *)malloc(sizeof(t_list));
-	if (!node)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
-}
-
-/* int main()
-{
-	t_list *node = ft_lstnew("Hello, world!");
-	if (node)
+	if (lst)
 	{
-		printf("Content: %s\n", (char *)node->content);
-		printf("Next: %p\n", node->next);
+		if (*lst)
+		{
+			last = ft_lstlast(*lst);
+			last->next = new;
+		}
+		else
+			*lst = new;
 	}
-	return 0;
-} */
+}
