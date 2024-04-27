@@ -6,7 +6,7 @@
 #    By: gudaniel <gudaniel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 17:27:27 by gudaniel          #+#    #+#              #
-#    Updated: 2024/04/27 15:46:28 by gudaniel         ###   ########.fr        #
+#    Updated: 2024/04/27 15:59:18 by gudaniel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,8 +31,10 @@ COMPILER = cc
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		$(COMPILER) $(FLAG) -c $(SOURCE) 
-		ar rcs $(NAME) $(OBJ)
+	ar rcs $(NAME) $(OBJ)
+
+%.o: %.c	
+	$(COMPILER) $(FLAG) -c $< -o $@
 
 clean:	
 	rm -f $(OBJ) $(BONUS_OBJ)
