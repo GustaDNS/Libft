@@ -6,7 +6,7 @@
 /*   By: gudaniel <gudaniel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 14:45:18 by marvin            #+#    #+#             */
-/*   Updated: 2024/04/25 15:13:41 by gudaniel         ###   ########.fr       */
+/*   Updated: 2024/04/27 15:40:18 by gudaniel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <string.h>
-# include <stdio.h>
-# include <ctype.h>
-# include <strings.h>
 
 typedef struct s_list
 {

@@ -6,7 +6,7 @@
 #    By: gudaniel <gudaniel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 17:27:27 by gudaniel          #+#    #+#              #
-#    Updated: 2024/04/25 17:27:30 by gudaniel         ###   ########.fr        #
+#    Updated: 2024/04/27 15:46:28 by gudaniel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,16 +24,15 @@ SOURCE_BONUS = ft_lstnew.c	ft_lstadd_front.c	ft_lstsize.c	ft_lstlast.c	ft_lstadd
 			   ft_lstdelone.c	ft_lstclear.c	ft_lstiter.c	ft_lstmap.c
 
 OBJ = $(SOURCE:.c=.o)
-BONUS_OBJ = $(SOURCE_BONUS:.c=.o)
+BONUS_OBJ = $(SOURCE_BONUS:.c=.o) $(OBJ)
 FLAG = -Wall -Wextra -Werror
 COMPILER = cc
 
 all: $(NAME)
 
-$(NAME):
-		$(COMPILER) $(FLAG) -c $(SOURCE)
-		ar rc $(NAME) $(OBJ)
-		ranlib $(NAME)
+$(NAME): $(OBJ)
+		$(COMPILER) $(FLAG) -c $(SOURCE) 
+		ar rcs $(NAME) $(OBJ)
 
 clean:	
 	rm -f $(OBJ) $(BONUS_OBJ)
@@ -43,5 +42,5 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(OBJ) $(BONUS_OBJ)
-		ar rcs $(NAME) $(BONUS_OBJ) $(OBJ) 
+bonus: $(BONUS_OBJ)
+		@make OBJ="$(BONUS_OBJ)" all

@@ -6,7 +6,7 @@
 /*   By: gudaniel <gudaniel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:00:40 by gudaniel          #+#    #+#             */
-/*   Updated: 2024/04/22 18:28:05 by gudaniel         ###   ########.fr       */
+/*   Updated: 2024/04/27 15:41:06 by gudaniel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 
 	if (!s)
 		return (NULL);
-	len = strlen(s);
+	len = ft_strlen(s);
 	new_str = (char *)malloc (len + 1);
 	if (!new_str)
 		return (NULL);
