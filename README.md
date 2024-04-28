@@ -6,7 +6,7 @@
 This project was graded <strong>125/100</strong>.
 
 ## 📒 **About**
-This project is all about writing down a useful set of functions to later on be used on future projects. All the code was implemented by me and based on the version of the subject available from the moment of the kickoff here in Porto, <strong>2<sup>nd</sup> November 2022</strong>.
+This project is all about writing down a useful set of functions to later on be used on future projects. All the code was implemented by me and based on the version of the subject available from the moment of the kickoff here in Porto, <strong>9<sup>th</sup> April 2024</strong>.
 
 ## 🔧 **Implementation**
 <table>
